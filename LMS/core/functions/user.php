@@ -1,13 +1,4 @@
 <?php
-function update_user($update_data,$user_id){
-  $update = array();
-  array_walk($update_data, 'array_validate');
-
-  foreach ($update_data as $field => $data) {
-    $update[] = '`' . $field .'` = \'' . $data . '\'';
-  }
-  mysql_query("UPDATE `users` SET " . implode(', ', $update) . "  WHERE `user_id` = $user_id");
-}
 function change_password($user_id, $password){
   $password = md5($password);
   $user_id = (int)$user_id;

@@ -1,3 +1,6 @@
+      <div class="pro-pic">
+
+      </div>
 
       <h1 id="username"><?php echo $user_data['first_name'] ?> <?php echo $user_data['last_name'] ?></h1>
         <div class="user-data-form">
@@ -47,7 +50,7 @@
                 <td>
                 </td>
                 <td>
-                    <input id="cb" type="submit"  value="Save Changes">
+                    <input id="cb" type="submit" name="sub" value="Save Changes">
                 </td>
               </tr>
             </table>

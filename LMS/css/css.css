@@ -163,38 +163,8 @@ div{
   margin: 5px auto 5px auto;
 }
 
-.widget-mini{
-    background: black;
-    height: 100px;
-    width: 960px;
-    position: absolute;
-    top: 106px;
-    color: white;
-    margin-left: 0px;
-    }
-
-.widget-mini form{
-    top: 4px;
-    position: absolute;
-    background-color: black;
-    color: white;
-    right: 14px;
-}
-
-.widget-mini form td{
-  font-family: 'Titillium Web', sans-serif;
-}
-
-.widget-mini form h3{
-  display: block;
-  font-size: 23px;
-  font-weight: normal;
-  font-family: 'Titillium Web', sans-serif;
-  margin: 5px auto 5px auto;
-}
-
 .content{
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', sans-serif; 
   width: 960px;
   background: #ffffff;
   border: 1px solid #ccc;
@@ -265,15 +235,14 @@ div{
 #cb:link, #cb:visited {
   background-color: white;
   color: black;
-  border: 2px solid #e5b71c;
-  padding: 4px 9px;
+  border: 1.5px solid #242c42;
+  padding: 2px 4px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
   margin-left:0px;
-  border-radius: 2px;
-  margin: 3px 0px;
+  border-radius: 12px;
 }
 
 
@@ -285,16 +254,16 @@ div{
 }
 
 #cb{
-    background-color: white;
-    color: black;
-    border: 2px solid #e5b71c;
-    padding: 4px 22px;
+    background-color: black;
+    color: white;
+    border: 1.5px solid #e5b71c;
+    padding: 2px 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
     margin-left: 0px;
-    border-radius: 2px;
+    border-radius: 7px;
 }
 
 
@@ -306,14 +275,14 @@ div{
 
 .footer{
   text-align: center;
-  font-family: 'Titillium Web','Istok Web',calibri, Arial,tahoma, Helvetica, sans-serif;
-  color: #e5b71c;
+  font-family: 'Istok Web',calibri, Arial,tahoma, Helvetica, sans-serif;
+  color: #0cbdaa;
 }
 
 
 .headerButton {
   display: inline-block;
-  border-radius: 6px;
+  border-radius: 21px;
   background-color: #E5B71C;
   border: none;
   color: #FFFFFF;
@@ -333,9 +302,8 @@ div{
   transition: 0.5s;
 }
 
-.headerButton span::after {
-  color: black;
-  content: " »";
+.headerButton span:after {
+  content: '»';
   position: absolute;
   opacity: 0;
   top: 0;
@@ -344,7 +312,6 @@ div{
 }
 
 .headerButton:hover span {
-  color: black;
   padding-right: 10px;
 }
 
@@ -356,7 +323,7 @@ div{
 
 #department {
   display: inline-block;
-  border-radius: 6px;
+  border-radius: 21px;
   background-color: #E5B71C;
   border: none;
   color: #FFFFFF;
@@ -377,7 +344,6 @@ div{
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    border-radius: 4px;
     display: none;
     position: absolute;
     min-width: 100px;
@@ -385,16 +351,15 @@ div{
     padding: 3px 12px;
     z-index: 1;
     background-color: #ffffff;
+
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    border-radius: 3px;
     color: black;
-    padding: 6px 10px;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    margin: 7px 0px;
 }
 
 /* Change color of dropdown links on hover */
@@ -478,7 +443,7 @@ div{
     background-color: black;
 }
 
-#front-bor {
+#front-bor { 
     text-align: center;
     color: black;
     margin-top: -8px;
@@ -495,8 +460,8 @@ div{
   }
 
 #front-bor span{
-  font-family: Tahoma, sans-serif;
-  font-size: 9pt;
+  font-family: Tahoma, sans-serif; 
+  font-size: 9pt; 
   line-height: 50%;
 
 }
@@ -573,27 +538,13 @@ margin-top: -19px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
-.data-form{
-  margin: 140px 0px;
-}
-.content h1#username{
-  float: left;
-  margin: -5px -183px 15px 82px;
-  font-size: 2.2em;
-}
 
-.user-data-form{
-  float: left;
-  margin-top: 74px;
-}
 
-.user-data-form td{
-  padding: 11px 27px;
-}
+
 .item-list ul li span{
     display: block;
     position: relative;
-    z-index: 0;
+    z-index: 300;
     margin-left: -24px;}
 
 #list-img2{

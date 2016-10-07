@@ -6,12 +6,17 @@
     <?php include 'includes/header.php'; ?>
 
     <div class="content">
+
+    <div class="front-wide">
       <?php
       if (logged_in() === true){
-        include 'includes/widgets/loggedinwmini2.php';
+        include 'includes/widgets/loggedinw.php';
       }else {
         include 'includes/widgets/loginw.php';
       }
+      ?>
+
+      </div>
 
       <h1> History Page</h1>
       </div>

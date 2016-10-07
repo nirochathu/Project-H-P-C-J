@@ -7,15 +7,19 @@
 
 
     <div class="content">
+
+      <div class="front-wide">
+      
       <?php
       if (logged_in() === true){
-        include 'includes/widgets/loggedinwmini2.php';
+        include 'includes/widgets/loggedinw.php';
       }else {
         include 'includes/widgets/loginw.php';
       }
       ?>
 
       <h1>CONTACT PAGE</h1>
+      </div>
     </div>
 
 
