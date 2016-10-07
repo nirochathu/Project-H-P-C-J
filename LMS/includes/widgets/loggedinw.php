@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td>
-          <a id="cb" href="changepassword.php">Change Password</a>
+          <a id="cb" href="userprofile.php">View Profile</a>
         </td>
       </tr>
       <tr>
