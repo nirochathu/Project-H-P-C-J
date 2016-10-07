@@ -12,4 +12,5 @@ if (logged_in() === true){
 $errors = array();
 $errors[0] = '*In oder to access you must loged in';
 $errors[2] = '';
+$errors[4]='';
  ?>
