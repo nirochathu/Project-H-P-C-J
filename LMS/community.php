@@ -6,17 +6,13 @@
     <?php include 'includes/header.php'; ?>
 
     <div class="content">
-
-    <div class="front-wide">
       <?php
       if (logged_in() === true){
-        include 'includes/widgets/loggedinw.php';
+        include 'includes/widgets/loggedinwmini2.php';
       }else {
         include 'includes/widgets/loginw.php';
       }
       ?>
-
-      </div>
 
       <h1> Community Page</h1>
       </div>
