@@ -10,6 +10,7 @@
     <div class="front-wide">
 
       <?php
+      // test commit by niro
       if (logged_in() === true){
         include 'includes/widgets/loggedinw.php';
       }else {
@@ -17,7 +18,7 @@
       }
       ?>
       	<div class="featured-front">
-      	
+
       	<div class="featured1">
       	<div id="count-container" class="positioning-text">
   			<p> <strong> <span class="no-bold">#1 in the World</span></strong><br />
@@ -26,7 +27,7 @@
 
 			<div class="homepage-headline">
 			<span class="yellow">ideas</span> that change<br /> the world</div>
-		</div>  
+		</div>
 		</div>
 
      </div>
@@ -38,22 +39,22 @@
          <li> <a class="visit" href="strategicPlans.php"> <img id="list-img2" src="includes/Images/plan.jpg"> </a> <a class="visit" href="strategicPlans.php"> <span id="list-span2">Strategic Plans </span> </a> </li>
         <li> <a class="visit" href="community.php"> <img id="list-img3" src="includes/Images/community.png" style="
                 width: 49px; height: 48px; border-radius: 50px; margin-left: 47px; margin-top: 5px;"> </a> <a class="visit" href="community.php"> <span id="list-span3">Community</span> </a></li>
-         <li> <a class="visit" href="leadership.php"> <img id="list-img4" src="includes/Images/leadership.jpg"> </a> <a class="visit" href="leadership.php"> <span id="list-span4">Leadership</span> </a> </li> 
+         <li> <a class="visit" href="leadership.php"> <img id="list-img4" src="includes/Images/leadership.jpg"> </a> <a class="visit" href="leadership.php"> <span id="list-span4">Leadership</span> </a> </li>
 
        </ul>
      </div>
-       
+
      </p>
-        
+
       </div>
 
      </div>
 
       <div class="bor-main">
 
-          <div class="bor"> <img id="img1" src="includes/Images/border.png"> 
+          <div class="bor"> <img id="img1" src="includes/Images/border.png">
 
-              <p id="front-bor"><span><b>University of Westeros LMS is students' virtual learning experience. UOW is committed to maintaining the highest academic standards and quality of degree programmes compete with students all around the globe . University of Westeros is home to world-changing research and inspired teaching. At the hub of a growing network of global partnerships, UOW will shape the future by building bridges with industry and between disciplines, institutions and communities.<b></span></p>       
+              <p id="front-bor"><span><b>University of Westeros LMS is students' virtual learning experience. UOW is committed to maintaining the highest academic standards and quality of degree programmes compete with students all around the globe . University of Westeros is home to world-changing research and inspired teaching. At the hub of a growing network of global partnerships, UOW will shape the future by building bridges with industry and between disciplines, institutions and communities.<b></span></p>
 
         <img id="img2" src="includes/Images/border.png"> </div>
       </div>
