@@ -33,9 +33,9 @@ include 'includes/head.php'; ?>
   <?php include 'includes/header.php'; ?>
 
   <div class="error-content">
-      <?php
-        include 'includes/widgets/changepasswordw.php';
-      ?>
+    <?php
+    include 'includes/widgets/changepasswordw.php';
+    ?>
   </div>
   <div class="errors">
     <?php echo $errors[2]; ?>

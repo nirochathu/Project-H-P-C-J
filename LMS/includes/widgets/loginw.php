@@ -11,23 +11,23 @@
         <td>
           <input type="text" name="username" value="">
         </td>
-        </tr>
-        <tr>
-          <td>
-            Password
-          </td>
-          <td>
-            <input type="password" name="password" value="">
-          </td>
-        </tr>
-        <tr>
-          <td>
+      </tr>
+      <tr>
+        <td>
+          Password
+        </td>
+        <td>
+          <input type="password" name="password" value="">
+        </td>
+      </tr>
+      <tr>
+        <td>
 
-          </td>
-          <td>
-            <input id="cb" type="submit" name="sub" value="Login">
-          </td>
-        </tr>
+        </td>
+        <td>
+          <input id="cb" type="submit" name="sub" value="Login">
+        </td>
+      </tr>
     </table>
   </form>
 </div>
