@@ -24,3 +24,10 @@ so far what we have
 
 >profile edit not working
 
+>profile edit working
+
+>create some access levels (admin/teacher/genrel_user)
+
+>admin_only pages ae ready 
+
+>teacher_only pages are ready 
