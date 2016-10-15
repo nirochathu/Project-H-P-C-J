@@ -12,23 +12,23 @@ if (empty($_POST) === false){
   }
   if (empty($errors[4]) === true) {
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
-        $errors[4] ='not a vaild email address';
+      $errors[4] ='not a vaild email address';
     }else if(preg_match("/\\s/",$_POST['user_name'])){
-        $errors[4] ='username must not contain spaces';
+      $errors[4] ='username must not contain spaces';
     }else if(user_exist($_POST['user_name'])){
-        $errors[4] ='username alredy exist';
+      $errors[4] ='username alredy exist';
     }else if (empty($_POST) === false && empty($errors) === false ){
-          $update_data = array(
-            'user_name' => $_POST['user_name'],
-            'first_name' => $_POST['first_name'],
-            'last_name' => $_POST['last_name'],
-            'email' => $_POST['email'],
-            'gender' => $_POST['gender'],
-          );
-          update_user($update_data, $session_user_id);
-          header('Location: userprofile.php');
-          exit();
-        }
+      $update_data = array(
+        'user_name' => $_POST['user_name'],
+        'first_name' => $_POST['first_name'],
+        'last_name' => $_POST['last_name'],
+        'email' => $_POST['email'],
+        'gender' => $_POST['gender'],
+      );
+      update_user($update_data, $session_user_id);
+      header('Location: userprofile.php');
+      exit();
+    }
 
   }
 }
@@ -37,20 +37,20 @@ include 'includes/head.php'; ?>
   <?php include 'includes/header.php'; ?>
   <?php
 
- ?>
+  ?>
 
   <div class="content">
     <div class="data-form">
-        <?php
-        if (logged_in() === true){
-          include 'includes/widgets/loggedinwmini2.php';
-        }else {
-          include 'includes/widgets/loginw.php';
-        }
-        ?>
+      <?php
+      if (logged_in() === true){
+        include 'includes/widgets/loggedinwmini2.php';
+      }else {
+        include 'includes/widgets/loginw.php';
+      }
+      ?>
     </div>
 
-      <?php
+    <?php
 
 
     include 'includes/widgets/editw.php';?>
@@ -61,5 +61,6 @@ include 'includes/head.php'; ?>
     ?>
   </div>
   <?php include 'includes/footer.php'; ?>
+
 </body>
 </html>

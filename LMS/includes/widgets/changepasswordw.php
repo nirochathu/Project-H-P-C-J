@@ -10,31 +10,31 @@
         <td>
           <input type="password" name="password" value="">
         </td>
-        </tr>
-        <tr>
-          <td>
-            *New Password
-          </td>
-          <td>
-            <input type="password" name="new_password" value="">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            *New Password (again)
-          </td>
-          <td>
-            <input type="password" name="password_again" value="">
-          </td>
-        </tr>
-        <tr>
-          <td>
+      </tr>
+      <tr>
+        <td>
+          *New Password
+        </td>
+        <td>
+          <input type="password" name="new_password" value="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          *New Password (again)
+        </td>
+        <td>
+          <input type="password" name="password_again" value="">
+        </td>
+      </tr>
+      <tr>
+        <td>
 
-          </td>
-          <td>
-            <input id="cb" type="submit" name="sub" value="Change">
-          </td>
-        </tr>
+        </td>
+        <td>
+          <input id="cb" type="submit" name="sub" value="Change">
+        </td>
+      </tr>
     </table>
   </form>
 </div>
