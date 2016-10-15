@@ -31,3 +31,5 @@ so far what we have
 >admin_only pages ae ready 
 
 >teacher_only pages are ready 
+
+>bug fixes for edit user page
