@@ -5,7 +5,7 @@
     <table>
       <tr>
         <td>
-          User Name*
+          *User Name
         </td>
         <td>
           <input type="text" name="user_name" value="">
@@ -29,7 +29,7 @@
       </tr>
       <tr>
         <td>
-          e-Mail*
+          *e-Mail
         </td>
         <td>
           <input type="text" name="email" value="">

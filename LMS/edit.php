@@ -15,7 +15,7 @@ if (empty($_POST) === false){
       $errors[4] ='not a vaild email address';
     }else if(preg_match("/\\s/",$_POST['user_name'])){
       $errors[4] ='username must not contain spaces';
-    }else if(user_exist($_POST['user_name'])){
+    }else if(user_exist($_POST['user_name']) && $user_data['user_name'] !== $_POST['user_name']){
       $errors[4] ='username alredy exist';
     }else if (empty($_POST) === false && empty($errors) === false ){
       $update_data = array(
@@ -55,7 +55,7 @@ include 'includes/head.php'; ?>
 
     include 'includes/widgets/editw.php';?>
   </div>
-  <div class="errors">
+  <div class="errors-edit-user">
     <?php
     echo $errors[4];
     ?>

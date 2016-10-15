@@ -62,6 +62,14 @@ include 'includes/head.php';
           </tr>
           <tr>
             <td>
+              Account Type
+            </td>
+            <td>
+              <?php echo $user_data['type'] ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
 
             </td>
             <td>
