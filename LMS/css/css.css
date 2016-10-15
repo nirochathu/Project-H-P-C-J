@@ -241,6 +241,14 @@ div{
           font-family: 'Titillium Web', sans-serif;
         }
 
+        .errors-edit-user{
+          position: absolute;
+          top: 610px;
+          left: 272px;
+          color: red;
+          font-family: 'Titillium Web', sans-serif;
+        }
+
         .widget-change-password{
           background: #f0f0f0;
           height: 100px;
