@@ -6,7 +6,6 @@ if (empty($_POST) === false){
   $list = array('user_name', 'email');
   foreach ($_POST as $key => $value) {
     if (empty($value) && in_array($key, $list) === true) {
-
       $errors[4] ='*Marked fields are required';
     }
   }
@@ -29,14 +28,12 @@ if (empty($_POST) === false){
       header('Location: userprofile.php');
       exit();
     }
-
   }
 }
 include 'includes/head.php'; ?>
 <body>
   <?php include 'includes/header.php'; ?>
   <?php
-
   ?>
 
   <div class="content">

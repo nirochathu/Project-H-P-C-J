@@ -1,13 +1,13 @@
 <?php
 function add_user($add_data){
   $add_user = array();
-  array_walk($add_data, 'array_validate');
-
-  foreach ($add_data as $field => $data) {
-    $add_user[] = '`' . $field .'` = \'' . $data . '\'';
-  }
-  mysql_query("INSERT INTO `users`(`user_name`,`first_name`,`last_name`,`email`,`gender`,`type`,`password`,`active`) VALUES ('" . implode("', '", $add_data) . "','5f4dcc3b5aa765d61d8327deb882cf99','1')");
-}
+   array_walk($add_data, 'array_validate');
+ 
+   foreach ($add_data as $field => $data) {
+     $add_user[] = '`' . $field .'` = \'' . $data . '\'';
+   }
+   mysql_query("INSERT INTO `users`(`user_name`,`first_name`,`last_name`,`email`,`gender`,`type`,`password`,`active`) VALUES ('" . implode("', '", $add_data) . "','5f4dcc3b5aa765d61d8327deb882cf99','1')");
+ }
 
 function update_user($update_data,$user_id){
   $update = array();
@@ -18,7 +18,6 @@ function update_user($update_data,$user_id){
   }
   mysql_query("UPDATE `users` SET " . implode(', ', $update) . "  WHERE `user_id` = $user_id");
 }
-
 function change_password($user_id, $password){
   $password = md5($password);
   $user_id = (int)$user_id;

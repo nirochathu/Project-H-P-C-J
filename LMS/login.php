@@ -40,12 +40,17 @@ if (empty($_POST) == false ) {
   </div>
   <div class="errors">
     <?php echo $errors[1]; ?>
+
+      <div class="forgot-password">
+    <p> If you forgot your password, <SPAN> <A href='forgotPassword.php'> Click Here </A>  </SPAN></p>
   </div>
+  </div>
+
+
   <?php
 
-
-
 }
+
 include 'includes/footer.php';
 
 ?>

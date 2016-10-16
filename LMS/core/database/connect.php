@@ -1,4 +1,4 @@
 <?php
-  $con=mysql_connect('localhost','root','');
+  $conn=mysql_connect('localhost','root','');
   mysql_select_db('lms');
  ?>
