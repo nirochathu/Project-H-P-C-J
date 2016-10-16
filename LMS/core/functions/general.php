@@ -9,7 +9,7 @@ function access($user_id, $type){
 //if type not the admin type redirect to index.php
 function admin_only(){
   global $user_data;
-  if (access($user_data['user_id'], 1) == false){
+  if (access($user_data['user_id'], 100) == false){
     header('Location: index.php');
     exit();
   }
@@ -18,8 +18,8 @@ function admin_only(){
 //if type not the admin type or teacher type redirect to index.php
 function teacher_only(){
   global $user_data;
-  if (access($user_data['user_id'], 2) == false){
-    if (access($user_data['user_id'], 1) == false){
+  if (access($user_data['user_id'], 70) == false){
+    if (access($user_data['user_id'], 100) == false){
       header('Location: index.php');
       exit();
     }

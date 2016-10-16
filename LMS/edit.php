@@ -50,10 +50,7 @@ include 'includes/head.php'; ?>
       ?>
     </div>
 
-    <?php
-
-
-    include 'includes/widgets/editw.php';?>
+    <?php include 'includes/widgets/editw.php';?>
   </div>
   <div class="errors-edit-user">
     <?php
