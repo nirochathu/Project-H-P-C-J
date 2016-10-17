@@ -10,7 +10,7 @@
     	
 
     	<div class="recover">
-  			<form class="recoverPassword" action="recoverPassword.php"  method="post">
+  			<form class="recoverPassword" action="sendRecoverEmail.php"  method="post">
 			    <h2> Recover Forgotten Password</h2>
 			    <hr>
 			    <table>

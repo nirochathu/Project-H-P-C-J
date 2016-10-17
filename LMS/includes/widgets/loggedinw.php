@@ -5,13 +5,13 @@
     <table>
       <tr>
         <td>
-          <a id="cb" href="userprofile.php">View Profile</a>
+        <a id="cb" href="userprofile.php">View Profile</a>
         </td>
         <td>
           <?php
-          if($user_data['type'] == 100){
-            echo('<a id="cb" href="admin.php">Admin Panel</a>');
-          }?>
+           if($user_data['type'] == 100){
+             echo('<a id="cb" href="admin.php">Admin Panel</a>');
+           }?>
         </td>
       </tr>
       <tr>

@@ -7,7 +7,6 @@ if (empty($_POST) === false){
   $list = array('password', 'new_password', 'passwoed_again');
   foreach ($_POST as $key => $value) {
     if (empty($value) && in_array($key, $list) === true) {
-
       $errors[2] ='*Marked fields are required';
     }
   }
@@ -25,10 +24,7 @@ if (empty($_POST) === false){
   else{
     $errors[3] = 'Current password incorrect';
   }
-
 }
-
-
 include 'includes/head.php'; ?>
 <body>
   <?php include 'includes/header.php'; ?>

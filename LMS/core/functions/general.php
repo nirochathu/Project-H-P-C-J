@@ -11,10 +11,10 @@ function admin_button(){
   if(access($user_data['user_id'], 100) == true){
     return true;
   }else{
-    return false;
-  }
-}
-
+     return false;
+   }
+ }
+ 
 //if type not the admin type redirect to index.php
 function admin_only(){
   global $user_data;
