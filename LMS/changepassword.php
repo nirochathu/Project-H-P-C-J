@@ -11,7 +11,8 @@ if (empty($_POST) === false){
       $errors[2] ='*Marked fields are required';
     }
   }
-  if (md5($_POST['password']) === $user_data['password']) {
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 11]);
+  if (password_verify($password, $user_data['password']) !== true) {
     if ($_POST['new_password'] !== $_POST['password_again']) {
       $errors [3] = 'New password combination does not match';
     }else if(strlen($_POST['new_password']) < 6){

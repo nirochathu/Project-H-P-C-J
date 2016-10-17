@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2016 at 10:08 AM
+-- Generation Time: Oct 17, 2016 at 12:26 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.5.38
 
@@ -29,19 +29,23 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `user_name` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `first_name` varchar(32) NOT NULL,
   `last_name` varchar(32) NOT NULL,
   `email` varchar(1024) NOT NULL,
-  `active` int(1) NOT NULL DEFAULT '0'
+  `gender` varchar(6) NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  `type` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `password`, `first_name`, `last_name`, `email`, `active`) VALUES
-(1, 'shalinda', '5f4dcc3b5aa765d61d8327deb882cf99', 'shalinda', 'Silva', 'shalindasilva1@gmail.com', 1);
+INSERT INTO `users` (`user_id`, `user_name`, `password`, `first_name`, `last_name`, `email`, `gender`, `active`, `type`) VALUES
+(1, 'shalinda', '$2y$11$mJHtQ2OEhk2zeORcPDnA5uwfoTHOIL60ZAzkamDoAdiyZE0T3ow4e', 'Shalinda', 'Silva', 'shalindasilva1@gmail.com', 'Male', 1, 100),
+(2, 'hanna94', '$2y$11$ye0Y3LO90OoAqjRN/MrLl.UvKgljLPIZsFTCIs3DCu/qa7BCuijWa', 'Hanna', 'Jumar', 'hannajumar@gmail.com', 'Female', 1, 70),
+(7, 'ashan', '$2y$11$oO/Y2iomSklBVCmGRcF3DelyvC7ndirFu348FzzhV2qbhsJvZoqA2', 'Ashan', 'Randika', 'ashanfernando95@gmail.com', 'Male', 1, 100);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

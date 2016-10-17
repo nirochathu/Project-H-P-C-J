@@ -203,23 +203,23 @@ div{
           top: 5px;
         }
 
-.error-content{
-    width: 960px;
-    background: #f0f0f0;
-    border: 1px solid #ccc;
-    height: 502px;
-    margin: 96px auto 0px auto;
-    top: 0px;
-}
+        .error-content{
+          width: 960px;
+          background: #f0f0f0;
+          border: 1px solid #ccc;
+          height: 830px;
+          margin: 96px auto 0px auto;
+          top: 5px;
+        }
 
-.widget-error{
-  background: #f0f0f0;
-  height: 100px;
-  width: 300px;
-  position: absolute;
-  top: 225px;
-  left: 40%;
-}
+        .widget-error{
+          background: #f0f0f0;
+          height: 100px;
+          width: 300px;
+          position: absolute;
+          top: 400px;
+          left: 40%;
+        }
 
         .widget-error form td{
           font-family: 'Titillium Web', sans-serif;
@@ -233,14 +233,14 @@ div{
           margin: 5px auto 5px auto;
         }
 
-.errors{
-  position: absolute;
-  top: 404px;
-  left: 40%;
-  color: red;
-  font-family: 'Titillium Web', sans-serif;
-}
-  
+        .errors{
+          position: absolute;
+          top: 570px;
+          left: 40%;
+          color: red;
+          font-family: 'Titillium Web', sans-serif;
+        }
+
         .errors-edit-user{
           position: fixed;
           top: 610px;
@@ -249,22 +249,22 @@ div{
           font-family: 'Titillium Web', sans-serif;
         }
 
-  .errors-add-user{
+        .errors-add-user{
           position: fixed;
           top: 706px;
-           left: 34.3%;
-           color: red;
-           font-family: 'Titillium Web', sans-serif;
-         }
+          left: 34.3%;
+          color: red;
+          font-family: 'Titillium Web', sans-serif;
+        }
 
-.widget-change-password{
-  background: #f0f0f0;
-  height: 100px;
-  width: 400px;
-  position: absolute;
-  top: 274px;
-  left: 37%;
-}
+        .widget-change-password{
+          background: #f0f0f0;
+          height: 100px;
+          width: 400px;
+          position: absolute;
+          top: 400px;
+          left: 40%;
+        }
 
         .widget-change-password form td{
           font-family: 'Titillium Web', sans-serif;
@@ -593,7 +593,7 @@ div{
               margin: 140px 0px;
             }
             .content h1#username{
-               text-decoration: underline;
+              text-decoration: underline;
               float: left;
               margin: -5px -183px 15px 82px;
               font-size: 2.2em;
@@ -727,50 +727,3 @@ div{
                 color: white;
                 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
               }
-
-.forgot-password p {
-  color: black;
-}
-
-.forgot-password span{
-  color: blue;
-}
-
-.recover h2 {
-    display: block;
-    font-size: 1.6em;
-    font-weight: normal;
-    font-family: 'Titillium Web', sans-serif;
-    margin: 5px auto 5px auto;
-}
-
-.recover table {
-  margin-left: 7%;
-  margin-top: 30px;
-}
-
-.recover table th {
-font-family: 'Titillium Web', sans-serif;
-}
-
-#cb-rp {
-  background-color: white;
-    color: black;
-    border: 2px solid #e5b71c;
-    padding: 4px 22px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    margin-left: 0px;
-    border-radius: 2px;
-}
-
-.recover{
-    height: 100px;
-    width: 330px;
-    position: absolute;
-    top: 170px;
-    left: 30%;
-}
-
