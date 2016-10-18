@@ -38,7 +38,7 @@
                   <li> <a class="visit" href="strategicPlans.php"> <img id="list-img2" src="includes/Images/plan.jpg"> </a> <a class="visit" href="strategicPlans.php"> <span id="list-span2">Strategic Plans </span> </a> </li>
                   <li> <a class="visit" href="community.php"> <img id="list-img3" src="includes/Images/community.png" style="
                     width: 49px; height: 48px; border-radius: 50px; margin-left: 47px; margin-top: 5px;"> </a> <a class="visit" href="community.php"> <span id="list-span3">Community</span> </a></li>
-                    <li> <a class="visit" href="leadership.php"> <img id="list-img4" src="includes/Images/leadership.jpg"> </a> <a class="visit" href="leadership.php"> <span id="list-span4">Leadership</span> </a> </li>
+                    <li> <a class="visit" href="leadership.php"> <img id="list-img4" src="includes/Images/leadership.jpg" style="width: 49px; height: 48px; border-radius: 50px; margin-left: 47px; margin-top: 5px;"> </a> <a class="visit" href="leadership.php"> <span id="list-span4">Leadership</span> </a> </li>
 
                   </ul>
                 </div>
