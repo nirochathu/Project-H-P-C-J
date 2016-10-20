@@ -2,6 +2,9 @@
 <html>
 <?php include 'core/init.php';?>
 <?php include 'includes/head.php'; ?>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+
 <body>
   <?php include 'includes/header.php'; ?>
 
@@ -17,6 +20,7 @@
       }
       ?>
       <div class="featured-front">
+
 
         <div class="featured1">
           <div id="count-container" class="positioning-text">
@@ -42,23 +46,71 @@
 
                   </ul>
                 </div>
-
               </p>
-
             </div>
+          </div>
+          <div class="iframe">
+          <div class="slideshow-container">
+              <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="includes/Images/slide1.jpg" style="width: 960px;height: 320px;">
+                  <div class="text">Slide 1 </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="includes/Images/slide2.jpg" style="width: 960px;height: 320px;" >
+                <div class="text">Slide 2</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="includes/Images/slide3.jpg" style="width: 960px;height: 320px;">
+                <div class="text">Slide 3</div>
+              </div>
 
           </div>
+          </div>
+                <br>
+
+            <div style="text-align:center">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
 
           <div class="bor-main">
 
             <div class="bor"> <img id="img1" src="includes/Images/border.png">
 
-              <p id="front-bor"><span><b>University of Westeros LMS is students' virtual learning experience. UOW is committed to maintaining the highest academic standards and quality of degree programmes compete with students all around the globe . University of Westeros is home to world-changing research and inspired teaching. At the hub of a growing network of global partnerships, UOW will shape the future by building bridges with industry and between disciplines, institutions and communities.<b></span></p>
+              <p id="front-bor"><span><b>LMS of University of Westeros  is students' virtual learning experience. UOW is committed to maintaining the highest academic standards and quality of degree programmes compete with students all around the globe . University of Westeros is home to world-changing research and inspired teaching. <b></span></p>
 
                 <img id="img2" src="includes/Images/border.png"> </div>
               </div>
             </div>
 
             <?php include 'includes/footer.php'; ?>
+
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                       slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex> slides.length) {slideIndex = 1}
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 10000); // Change image every 10 seconds
+                }
+                </script>
           </body>
           </html>

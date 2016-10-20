@@ -3,10 +3,10 @@
 <?php include 'includes/head.php'; ?>
 <body>
 <?php include 'includes/header.php';
-//$user_id="";
+$user_id="";
   	$_GET ['f_name'];
   	$_GET ['l_name'];
-  	$_GET ['user_id']; ?>	
+  	$user_id= $_GET ['user_id']; ?>	
 
   <div class="content" style="height: 455px;">
 
@@ -37,7 +37,7 @@
 		      </tr>
 		      <tr>
 		        <td>
-		          Confirm New Password*
+		          Confirm New Password* 
 		        </td>
 		        <td>
 		          <input type="password" name="confirm_password" value="">
@@ -47,6 +47,7 @@
 		      <tr>
 		        <td>
 		          <input id="btn" type="submit" name="Reset" value="Reset" style="margin-left: 11px;">
+		          <input type="hidden" name="user_id" value=<?php echo $_GET['user_id'] ?> >
 		        </td>
 		        <td> <input id="btn" type="button" value="Cancel" onclick="window.location.href='index.php'"></td>
 		      </tr>

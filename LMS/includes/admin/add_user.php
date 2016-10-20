@@ -1,6 +1,7 @@
 <h1 id="username">Add New User</h1>
 <div class="user-data-form">
   <form class="edit" action="admin.php" method="post">
+    <input type="hidden" name="form_no" value="1">
     <table>
       <tr>
         <td>
@@ -67,7 +68,6 @@
       </tr>
     </table>
   </form>
-</div>
 </div>
 </body>
 </html>

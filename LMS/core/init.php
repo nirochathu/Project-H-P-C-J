@@ -8,7 +8,6 @@ if (logged_in() === true){
   $user_data = user_data($session_user_id,'user_id','user_name', 'password', 'first_name', 'last_name', 'email', 'gender', 'type');
 }
 
-
 $errors = array();
 $errors[0] = '*In oder to access you must loged in';
 $errors[2] = '';

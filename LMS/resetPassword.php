@@ -2,8 +2,9 @@
 <html>
 <?php include 'core/init.php';
 include 'includes/head.php'; 
-$err= $password= $user_id=$msg="";
-$password = $_POST['password'];
+$err= $user_id=$msg=$password="";
+
+
 
 ?>
 <script  type="text/javascript">
@@ -12,7 +13,7 @@ function goBack() {
 }
 </script>
 <body>
-  <?php echo $user_id; include 'includes/header.php'; ?>
+  <?php include 'includes/header.php'; ?>
 
   <div class="content" style="height: 455px;">
 
@@ -38,9 +39,14 @@ function goBack() {
       		$err = 'Password must be greater than 6 characters';}
   			else
   			{
-  				if ($password = $_POST['password'])
-  				{
-  					mysql_query("UPDATE `users` SET `password` = $password WHERE `user_id` = $user_id");
+            $user_id= $_POST['user_id'];
+            $password = md5($_POST['password']);
+  			    $update_data = array(
+            'password' => $password);
+            reset_password ($update_data, $user_id);
+
+              
+  					//mysql_query("UPDATE `users` SET  'password'=$password  WHERE `user_id` = $user_id");
   					if (mysql_affected_rows() ==1){
   						$msg="Your Password has been changed Successfully !";
   					}
@@ -73,11 +79,7 @@ function goBack() {
       	<?php } ?>
       	
     	
-    	<?php
-    } 
-      	
-  		
-   	?>
+
   		
   </div>
 

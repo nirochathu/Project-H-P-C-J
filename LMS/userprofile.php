@@ -65,7 +65,15 @@ include 'includes/head.php';
               Account Type
             </td>
             <td>
-              <?php echo $user_data['type'] ?>
+              <?php if ($user_data['type']==='100')
+                      {
+                        echo "Administrator";
+                      } elseif ($user_data['type']==='70')
+                      {
+                        echo "Teacher";
+                      } elseif ($user_data['type']==='20') {
+                        echo "Student";
+                      } ?>
             </td>
           </tr>
           <tr>

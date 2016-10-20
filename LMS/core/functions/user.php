@@ -1,13 +1,43 @@
 <?php
+function user_data_from_username($username){
+  $data  = array();
+  $username = sanitize($username);
+  $num_args = func_num_args();
+  $get_args = func_get_args();
+  $msg = $err="";
+
+  if ($get_args > 1){
+    unset($get_args[0]);
+
+    $list = '`'.implode('`,`',$get_args).'`';
+    $query = mysql_query("SELECT $list from `users` WHERE `user_name` = '$username'");
+    $data =mysql_fetch_assoc($query);
+    return $data;
+  }
+}
+
+function delete_user($user_id){
+mysql_query("DELETE FROM `users` WHERE `user_id` = $user_id");
+}
+
+function ban_user($user_id){
+  mysql_query("UPDATE `users` SET `active` = '0' WHERE `user_id` = $user_id");
+}
+
+function active_user($user_id){
+  mysql_query("UPDATE `users` SET `active` = '1' WHERE `user_id` = $user_id");
+}
+
 function add_user($add_data){
   $add_user = array();
-   array_walk($add_data, 'array_validate');
- 
-   foreach ($add_data as $field => $data) {
-     $add_user[] = '`' . $field .'` = \'' . $data . '\'';
-   }
-   mysql_query("INSERT INTO `users`(`user_name`,`first_name`,`last_name`,`email`,`gender`,`type`,`password`,`active`) VALUES ('" . implode("', '", $add_data) . "','5f4dcc3b5aa765d61d8327deb882cf99','1')");
- }
+  array_walk($add_data, 'array_validate');
+
+  foreach ($add_data as $field => $data) {
+    $add_user[] = '`' . $field .'` = \'' . $data . '\'';
+  }
+  $default_password ="$2y$11$"."oO/Y2iomSklBVCmGRcF3DelyvC7ndirFu348FzzhV2qbhsJvZoqA2";
+  mysql_query("INSERT INTO `users`(`user_name`,`first_name`,`last_name`,`email`,`gender`,`type`,`password`,`active`) VALUES ('" . implode("', '", $add_data) . "','$default_password','1')");
+}
 
 function update_user($update_data,$user_id){
   $update = array();
@@ -18,11 +48,22 @@ function update_user($update_data,$user_id){
   }
   mysql_query("UPDATE `users` SET " . implode(', ', $update) . "  WHERE `user_id` = $user_id");
 }
+
 function change_password($user_id, $password){
-  $password = md5($password);
+  $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 11]);
   $user_id = (int)$user_id;
   mysql_query("UPDATE `users` SET `password` = '$password' WHERE `user_id` = $user_id");
 
+}
+
+function reset_password($update_data,$user_id){
+  $update = array();
+  array_walk($update_data, 'array_validate');
+
+  foreach ($update_data as $field => $data) {
+    $update[] = '`' . $field .'` = \'' . $data . '\'';
+  }
+  mysql_query("UPDATE `users` SET " . implode(', ', $update) . "  WHERE `user_id` = $user_id");
 }
 
 function user_data($user_id){
@@ -65,7 +106,14 @@ function user_id_from_username($username){
   return mysql_result($query, 0, 'user_id');
 }
 
-
+function login ($username, $password){
+  $user_id = user_id_from_username($username);
+  $query = mysql_query("SELECT `password` FROM `users` WHERE `user_id` = $user_id ");
+  $hash = mysql_result($query, 0, 'password');
+  return (password_verify($password, $hash)) ? $user_id : false;
+}
+//md5 version
+/*
 function login($username, $password){
   $user_id = user_id_from_username($username);
 
@@ -75,4 +123,5 @@ function login($username, $password){
   $query = mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `user_name` = '$username' AND `password` = '$password'");
   return (mysql_result($query, 0) == 1) ? $user_id : false;
 }
+*/
 ?>
